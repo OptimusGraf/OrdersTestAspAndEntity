@@ -1,0 +1,17 @@
+﻿
+@model Order
+@{
+	ViewBag.Title = "Просмотр заказа номер:" + "id";
+}
+
+
+<article>
+    <h2> Просмотр заказа номер: @Model.Id</h2>
+
+    <p>Город отправителя: @Model.SitySender</p>
+    <p>Адрес отправителя: @Model.AdressSender</p>
+    <p>Город получателя: @Model.SityRecipient</p>
+    <p>Адрес получателя: @Model.AdressRecipient</p>
+    <p>Вес груза: @Model.Weight</p>
+    <p>Дата забора груза: @Model.Date.Date</p>
+</article>

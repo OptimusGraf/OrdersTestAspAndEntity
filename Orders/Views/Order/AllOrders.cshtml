@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Order>
+@{
+	ViewBag.Title = "Список заказов";
+}
+
+<section>
+
+	@foreach (Order order in Model)
+	{
+		<article>
+			<h5> <a href='@Url.Content($"~/Order/{@order.Id}")' > Номер заказа: @order.Id</a></h5>
+			<p> имя получателя: @order.NameRecipient, город получателя: @order.SityRecipient</p>
+		</article>
+	}
+	
+	
+</section>

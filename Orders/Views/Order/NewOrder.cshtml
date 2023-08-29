@@ -1,0 +1,40 @@
+﻿@model Order
+
+@{
+    ViewBag.Title = "Создайте заказ";
+}
+
+
+<form asp-action="NewOrder" asp-controller="Order">
+    <p>
+        <label asp-for="NameRecipient"> Введите имя получателя:</label>
+        <input type="text" required asp-for="NameRecipient">
+    </p>
+    <p>
+        <label asp-for="SitySender"> Введите город отправителя:</label>
+        <input type="text" required asp-for="SitySender">
+    </p>
+    <p>
+        <label asp-for="AdressSender"> Введите адрес отправителя:</label>
+        <input type="text" required asp-for="AdressSender">
+    </p>
+    <p>
+        <label asp-for="SityRecipient"> Введите город получателя:</label>
+        <input type="text" required asp-for="SityRecipient">
+    </p>
+    <p>
+        <label asp-for="AdressRecipient"> Введите адрес получателя:</label>
+        <input type="text" required asp-for="AdressRecipient">
+    </p>
+    <p>
+        <label asp-for="Weight"> Введите вес:</label>
+        <input type="text" required asp-for="Weight">
+    </p>
+    <p>
+        <label asp-for="Date"> Введите дату забора груза:</label>
+        <input type="date" required asp-for="Date">
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
